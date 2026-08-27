@@ -1,0 +1,16 @@
+node_modules/
+cdk.out/
+cdk-outputs.json
+cdk.context.json
+coverage/
+.DS_Store
+*.log
+*.duckdb
+*.wal
+.env
+.env.*
+!.env.example
+.npm-cache/
+.tools/
+.idea/
+.vscode/

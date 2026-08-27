@@ -1,0 +1,45 @@
+name: Bug report
+description: Report a reproducible problem in the demo or its documentation
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not include AWS credentials, account IDs, resource IDs, ARNs, tokens, passwords, or customer data.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Provide the smallest safe sequence of commands or documentation steps.
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: AWS Region
+      placeholder: us-east-1
+
+  - type: input
+    id: version
+    attributes:
+      label: Commit or release
+      placeholder: v0.1.0 or commit SHA
+
+  - type: checkboxes
+    id: sensitive-data
+    attributes:
+      label: Sensitive data check
+      options:
+        - label: I removed credentials, account IDs, resource IDs, ARNs, tokens, passwords, and customer data.
+          required: true

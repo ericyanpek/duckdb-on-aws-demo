@@ -1,0 +1,41 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CDK_DEFAULT_ACCOUNT: "123456789012"
+      CDK_DEFAULT_REGION: us-east-1
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run build
+      - run: npm run lint
+      - run: npm test
+      - run: shellcheck --severity=warning scripts/*.sh workbench/*.sh
+      - name: Synthesize the CDK stack without AWS credentials
+        run: |
+          cp cdk.context.example.json cdk.context.json
+          npm run synth -- --no-lookups

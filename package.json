@@ -1,0 +1,46 @@
+{
+  "name": "duckdb-on-aws-demo",
+  "version": "0.1.0",
+  "description": "Deployable DuckDB, DuckLake, Amazon S3 Tables, and Quack demo on AWS",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write 'bin/**/*.ts' 'lib/**/*.ts' 'test/**/*.ts' '*.json' 'eslint.config.js'",
+    "format:check": "prettier --check 'bin/**/*.ts' 'lib/**/*.ts' 'test/**/*.ts' '*.json' 'eslint.config.js'",
+    "test": "vitest run",
+    "synth": "cdk synth --strict",
+    "diff": "cdk diff",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy",
+    "demo:sync": "scripts/sync-workbench.sh",
+    "demo:prepare": "scripts/prepare-demo.sh",
+    "demo:verify": "scripts/verify-demo.sh",
+    "demo:concurrency": "scripts/concurrency-demo.sh",
+    "demo:quack:start": "scripts/start-quack.sh",
+    "demo:quack:stop": "scripts/stop-quack.sh",
+    "demo:quack:client": "scripts/quack-client.sh"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.266.0",
+    "cdk-nag": "^3.0.2",
+    "constructs": "^10.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@types/node": "^24.0.0",
+    "aws-cdk": "2.1139.0",
+    "eslint": "^9.39.0",
+    "eslint-plugin-awscdk": "^4.4.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.68.0",
+    "vitest": "^4.1.11"
+  }
+}
