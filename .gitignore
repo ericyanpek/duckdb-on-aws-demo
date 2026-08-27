@@ -1,16 +1,30 @@
+# Dependencies and package-manager caches
 node_modules/
+.npm-cache/
+
+# CDK runtime output and account-specific context
 cdk.out/
-cdk-outputs.json
+cdk-outputs*.json
 cdk.context.json
+
+# Local build, lint, and test output
 coverage/
-.DS_Store
-*.log
+dist/
+.cache/
+.vitest/
+.eslintcache
+*.tsbuildinfo
+
+# Local DuckDB state
 *.duckdb
 *.wal
+.tools/
+
+# Local configuration and editor state
+.DS_Store
+*.log
 .env
 .env.*
 !.env.example
-.npm-cache/
-.tools/
 .idea/
 .vscode/

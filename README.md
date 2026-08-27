@@ -60,8 +60,8 @@ scripts/destroy.sh
 2. [架构设计](docs/ARCHITECTURE_CN.md)
 3. [操作手册](docs/RUNBOOK_CN.md)
 4. [验证记录](docs/IMPLEMENTATION_RECORD_CN.md)
-5. [DuckDB 核心能力与使用场景调研](DUCKDB_DEEP_RESEARCH_CN.md)
-6. [社区实践、生态与厂商动作调研](DUCKDB_ECOSYSTEM_COMMUNITY_RESEARCH_CN.md)
+5. [DuckDB 核心能力与使用场景调研](docs/DUCKDB_DEEP_RESEARCH_CN.md)
+6. [社区实践、生态与厂商动作调研](docs/DUCKDB_ECOSYSTEM_COMMUNITY_RESEARCH_CN.md)
 7. [发布检查清单](docs/PUBLISHING_CHECKLIST_CN.md)
 
 ## 能力边界
