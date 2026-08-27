@@ -17,4 +17,4 @@ shellcheck --severity=warning scripts/*.sh workbench/*.sh
 
 文档中的时效性信息需要注明复查日期，并优先引用项目官方文档、云厂商产品文档或使用方的一手工程材料。厂商自报性能数字应明确标注来源，不应写成独立 Benchmark 结论。
 
-提交贡献即表示同意按仓库的 [Apache License 2.0](LICENSE) 提供该贡献。
+提交贡献即表示同意按仓库的 [Apache License 2.0](../LICENSE) 提供该贡献。

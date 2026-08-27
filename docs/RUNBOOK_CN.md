@@ -16,7 +16,7 @@ aws sts get-caller-identity
 aws configure get region
 ```
 
-脚本默认使用 `AWS_REGION`、`AWS_DEFAULT_REGION`，两者都没有设置时使用 `us-east-1`。`cdk.context.json` 会包含账号相关的 Availability Zone 查询结果，仓库已将该文件忽略；`cdk.context.example.json` 只供无凭证 CI 合成模板。
+脚本默认使用 `AWS_REGION`、`AWS_DEFAULT_REGION`，两者都没有设置时使用 `us-east-1`。`cdk.context.json` 会包含账号相关的 Availability Zone 查询结果，仓库已将该文件忽略；`.github/fixtures/cdk.context.example.json` 只供无凭证 CI 合成模板。
 
 ## 安装与验证
 

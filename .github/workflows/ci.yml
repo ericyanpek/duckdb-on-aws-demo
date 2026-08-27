@@ -37,5 +37,5 @@ jobs:
       - run: shellcheck --severity=warning scripts/*.sh workbench/*.sh
       - name: Synthesize the CDK stack without AWS credentials
         run: |
-          cp cdk.context.example.json cdk.context.json
+          cp .github/fixtures/cdk.context.example.json cdk.context.json
           npm run synth -- --no-lookups

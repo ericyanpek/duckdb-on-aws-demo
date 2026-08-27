@@ -38,7 +38,7 @@ git rev-list --all |
   done
 ```
 
-12 位账号 ID 也应检查，但测试 fixture 中的 `123456789012` 和 `cdk.context.example.json` 是公开占位值。
+12 位账号 ID 也应检查，但测试 fixture 中的 `123456789012` 和 `.github/fixtures/cdk.context.example.json` 是公开占位值。
 
 ## GitHub 设置
 
