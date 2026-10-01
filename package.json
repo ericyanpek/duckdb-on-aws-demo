@@ -27,7 +27,7 @@
     "demo:quack:client": "scripts/quack-client.sh"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.266.0",
+    "aws-cdk-lib": "^2.271.0",
     "cdk-nag": "^3.0.2",
     "constructs": "^10.8.1"
   },
